@@ -1,5 +1,7 @@
 package homework7;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -14,16 +16,11 @@ public class Main {
         allShapes[5] = new Circle("Big Red Circle",5);
 
 
-        Handler handler = new Handler();
-
-        for (Shape shape : allShapes) {
-            if (shape.hasName()) handler.printShapeName(shape);
-            handler.drawObject(shape);
-        }
+        Arrays.stream(allShapes).forEach(Handler::printShapeName);
 
         allShapes[4].setName("Let it be new name");
 
-        handler.printShapeName(allShapes[4]);
+        Handler.printShapeName(allShapes[4]);
 
     }
 }

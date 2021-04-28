@@ -30,6 +30,13 @@ public abstract class Shape implements Nameable {
     }
 
     @Override
+    public String toString() {
+        return "Shape{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean hasName() {
         return name != null;  // правильную проверку на null не помню, пересмотрю лекции на эту тему
     }
